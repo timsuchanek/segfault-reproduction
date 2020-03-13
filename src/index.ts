@@ -45,7 +45,7 @@ async function download() {
 
 main()
 
-function getRandomNumber(min = 2, max = 3) {
+function getRandomNumber(min = 2, max = 5) {
   const delta = max - min
   return Math.round(Math.random() * delta) + min
 }
