@@ -1,0 +1,18 @@
+{
+  "name": "segfault-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/fetch-engine": "^2.0.0-preview024",
+    "@types/node": "^13.9.1",
+    "del": "^5.1.0",
+    "execa": "^4.0.0",
+    "hasha": "^5.2.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  }
+}
