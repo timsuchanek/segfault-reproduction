@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@prisma/fetch-engine": "^2.0.0-preview024",
+    "@prisma/get-platform": "^2.0.0-preview024",
     "@types/node": "^13.9.1",
     "del": "^5.1.0",
     "execa": "^4.0.0",

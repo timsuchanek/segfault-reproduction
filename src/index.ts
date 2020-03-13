@@ -3,6 +3,7 @@ import hasha from 'hasha'
 import del from 'del'
 import execa from 'execa'
 import os from 'os'
+import { getPlatform } from '@prisma/get-platform'
 
 async function main() {
   const existingHashes: string[] = []
@@ -51,16 +52,20 @@ function getRandomNumber(min = 2, max = 5) {
 }
 
 async function getHashes() {
+  const platform = await getPlatform()
   const hashes = await Promise.all([
-    hasha.fromFile(path.join(__dirname, '../query-engine-darwin'), {
+    hasha.fromFile(path.join(__dirname, `../query-engine-${platform}`), {
       algorithm: 'sha256',
     }),
-    hasha.fromFile(path.join(__dirname, '../migration-engine-darwin'), {
+    hasha.fromFile(path.join(__dirname, `../migration-engine-${platform}`), {
       algorithm: 'sha256',
     }),
-    hasha.fromFile(path.join(__dirname, '../introspection-engine-darwin'), {
-      algorithm: 'sha256',
-    }),
+    hasha.fromFile(
+      path.join(__dirname, `../introspection-engine-${platform}`),
+      {
+        algorithm: 'sha256',
+      },
+    ),
   ])
   return hashes.join(', ')
 }

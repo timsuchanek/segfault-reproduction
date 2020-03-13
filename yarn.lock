@@ -44,7 +44,7 @@
     progress "^2.0.3"
     rimraf "^3.0.0"
 
-"@prisma/get-platform@2.0.0-preview024":
+"@prisma/get-platform@2.0.0-preview024", "@prisma/get-platform@^2.0.0-preview024":
   version "2.0.0-preview024"
   resolved "https://registry.yarnpkg.com/@prisma/get-platform/-/get-platform-2.0.0-preview024.tgz#8c2a906ca996a8c9d6620d38c34be7518ba61824"
   integrity sha512-ebHPNVBgwDuqba6uKwhvUFJOXTODel2VGCMWdUk9RgyQdryItuscsPnZX4tf8c3lDg2YKvtpJENg4f1PWcgDpw==
